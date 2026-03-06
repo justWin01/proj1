@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <title>Login</title>
 
-    <!-- Google Fonts: Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @vite(['resources/js/app.js'])
 
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Arial', sans-serif;
         }
     </style>
 </head>
@@ -21,7 +23,7 @@
 
         <!-- Left Image -->
         <div class="w-1/2 hidden md:block">
-            <img src="/mnt/data/853e829f-4ef0-46d6-b59d-69730c109915.png" alt="Login Image" class="h-full w-full object-cover">
+            <img src="" alt="Login Image" class="h-full w-full object-cover">
         </div>
 
         <!-- Right Form -->
@@ -34,10 +36,12 @@
             </div>
 
             <!-- Form -->
-            <form class="space-y-6">
+            <form id="loginForm" class="space-y-6">
+
                 <div>
                     <label class="text-sm text-gray-300">Email</label>
                     <input
+                        id="email"
                         type="email"
                         placeholder="your@email.com"
                         class="w-full mt-1 px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -48,6 +52,7 @@
                 <div>
                     <label class="text-sm text-gray-300">Password</label>
                     <input
+                        id="password"
                         type="password"
                         placeholder="********"
                         class="w-full mt-1 px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -70,6 +75,7 @@
                 <button type="button" class="w-full py-2.5 mt-2 border border-blue-500 text-blue-500 font-bold rounded-lg hover:bg-blue-500 hover:text-white transition duration-300">
                     Sign in with Google
                 </button>
+
             </form>
 
             <p class="text-center text-gray-500 text-xs mt-8">
@@ -78,6 +84,5 @@
         </div>
 
     </div>
-
 </body>
 </html>
