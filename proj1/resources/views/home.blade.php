@@ -1,39 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Home</title>
-    @vite('resources/css/app.css')
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    @vite(['resources/js/app.js'])
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
 </head>
+<body class="min-h-screen flex items-center justify-center bg-gray-900">
 
-<body class="bg-gray-100">
+    <div class="flex w-4/5 max-w-10xl shadow-2xl rounded-2xl overflow-hidden justify-center">
 
-<div class="min-h-screen flex flex-col">
 
-    <nav class="bg-blue-600 text-white p-4 flex justify-between">
-        <h1 class="font-bold">My Laravel App</h1>
 
-        <a href="/logout" class="bg-red-500 px-4 py-1 rounded hover:bg-red-600">
-            Logout
-        </a>
-    </nav>
+        <div class="w-full md:w-1/2 bg-gray-800/80 backdrop-blur-md p-12 flex flex-col justify-center">
 
-    <div class="flex-grow flex items-center justify-center">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-8">
+                <h1 class="text-3xl font-bold text-white">Welcome Home</h1>
+                <a href="/logout" class="px-4 py-2 bg-red-500 text-white font-semibold rounded-lg hover:bg-red-600 transition duration-300">
+                    Logout
+                </a>
+            </div>
 
-        <div class="bg-white p-10 rounded-xl shadow-lg text-center">
+            <!-- Card -->
+            <div class="bg-gray-700/70 p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-white mb-4">Hello, Admin!</h2>
+                <p class="text-gray-300 mb-6">
+                    You are successfully logged in. Enjoy your dashboard experience.
+                </p>
+            </div>
 
-            <h1 class="text-3xl font-bold mb-4">
-                Welcome Home
-            </h1>
-
-            <p class="text-gray-600">
-                You are successfully logged in.
+            <!-- Footer -->
+            <p class="text-center text-gray-400 text-xs mt-8">
+                ECL System © 2026
             </p>
 
         </div>
 
     </div>
-
-</div>
 
 </body>
 </html>
