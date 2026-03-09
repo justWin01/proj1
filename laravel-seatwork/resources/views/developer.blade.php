@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Developer Page</title>
+    <title>Laravel Seatwork3</title>
 </head>
 <body>
 
