@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Laravel Seatwork</title>
+    <title>Laravel Seatwork2</title>
 </head>
 
 <body>
