@@ -7,6 +7,14 @@
     <title>{{ $title ?? 'Default Activity Title' }}</title>
 </head>
 <body>
+    @extends('layouts.app')
+
+@section('title', 'Activity Page')
+
+@section('content')
+    <h1>Work</h1>
+    <p>This content is injected into the layout!</p>
+@endsection
     <div>
         <h1>
             {{ $heading }}
