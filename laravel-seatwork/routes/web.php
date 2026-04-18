@@ -9,3 +9,10 @@ Route::get('/', function () {
 Route::get('/developer/{name}', function ($name) {
     return view('developer', ['name' => $name]);
 });
+
+Route::get('/activity', function () {
+    return view('activity', [
+        'title' => 'My Activity Page',
+        'heading' => 'Work'
+    ]);
+});
