@@ -12,7 +12,6 @@ Route::get('/developer/{name}', function ($name) {
 
 Route::get('/activity', function () {
     return view('activity', [
-        'title' => 'My Activity Page',
-        'heading' => 'Work'
+        'heading' => 'Pig Disease Detection Dashboard'
     ]);
 });

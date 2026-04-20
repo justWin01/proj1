@@ -1,24 +1,18 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ $title ?? 'Default Activity Title' }}</title>
-</head>
-<body>
-    @extends('layouts.app')
-
-@section('title', 'Activity Page')
+@extends('layouts.app') @section('title', 'Farm Activity')
 
 @section('content')
-    <h1>Work</h1>
-    <p>This content is injected into the layout!</p>
-@endsection
     <div>
-        <h1>
-            {{ $heading }}
-        </h1>
+        <h1>{{ $heading }}</h1>
+        <p>Current Disease Detection Status: <strong>Active</strong></p>
+
+        <div id="pigMap" style="height: 400px;"></div>
     </div>
-</body>
-</html>
+@endsection
+
+@push('scripts')
+<script>
+    // Initialize GIS Map for PigHealth
+    var map = L.map('pigMap').setView([14.5995, 120.9842], 15);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+</script>
+@endpush
